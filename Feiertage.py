@@ -12,6 +12,10 @@ def datumkonvert(datum):
 
 jahr = datetime.date.today().year
 
+zeit = datetime.datetime.now().time()
+minzeit= datetime.time(7,55)
+maxzeit= datetime.time(17)
+
 a = jahr % 19
 b = jahr % 4
 c = jahr % 7
@@ -63,5 +67,6 @@ stephanstag,
 #testtag
 ]
 
-if(heute not in feiertage):
+
+if(heute not in feiertage and minzeit <= zeit <= maxzeit):
 	exec(open("Mail.py").read())

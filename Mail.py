@@ -22,7 +22,8 @@ async def check_mailbox(host, user, password):
 		await imap_client.logout()
 
 
-if __name__ == '__main__':
-	loop = asyncio.get_event_loop()
-	loop.run_until_complete(check_mailbox('SI-EX-02', 'task.planer', 'pjjz3*Ab'))
+while True:
+	if __name__ == '__main__':
+		loop = asyncio.get_event_loop()
+		loop.run_until_complete(check_mailbox('SI-EX-02', 'task.planer', 'pjjz3*Ab'))
 	
